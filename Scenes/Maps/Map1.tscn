@@ -307,9 +307,9 @@ sources/2 = SubResource("TileSetAtlasSource_4r0br")
 sources/3 = SubResource("TileSetAtlasSource_loq7g")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_3atk3"]
-vertices = PackedVector2Array(-94, 38, -94, -66, 62, -66, 62, 66, -198, 66, -130, 38, -198, -66, -130, -66)
+vertices = PackedVector2Array(-86, 38, -86, -66, 62, -66, 62, 66, -198, 66, -138, 38, -198, -66, -138, -66)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(0, 3, 4, 5), PackedInt32Array(5, 4, 6, 7)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(-208, -76, -208, 76, 72, 76, 72, -76, -104, -76, -104, 28, -120, 28, -120, -76)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-208, -76, -208, 76, 72, 76, 72, -76, -96, -76, -96, 28, -128, 28, -128, -76)])
 
 [sub_resource type="Curve2D" id="Curve2D_3atk3"]
 _data = {

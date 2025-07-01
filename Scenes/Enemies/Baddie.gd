@@ -6,9 +6,11 @@ func _ready() -> void:
 	# These values need to be adjusted for the actor's speed
 	# and the navigation layout.
 	var navigation_agent = $NavigationAgent2D
-	navigation_agent.path_desired_distance = .1
-	navigation_agent.target_desired_distance = .1
+	navigation_agent.path_desired_distance = 5
+	navigation_agent.target_desired_distance = 5
 	navigation_agent.debug_enabled = true
+	var sprite = $AnimatedSprite2D
+	sprite.play("default")
 
 func set_movement_target(movement_target: Vector2) -> void:
 	var navigation_agent = $NavigationAgent2D
