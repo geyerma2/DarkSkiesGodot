@@ -346,12 +346,14 @@ position = Vector2(-184, -52)
 rotation = 1.5708
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-visible = false
 mass = 1000.0
 physics_material_override = SubResource("PhysicsMaterial_bp0wf")
 gravity_scale = 0.0
 
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="RigidBody2D"]
+polygon = PackedVector2Array(760, 452, 760, 540, -192, 540, -192, 68, -160, 68, -168, 516, 160, 516, 160, 196, 192, 196, 192, 508, 256, 516, 576, 508, 584, 356, 416, 356, 416, 92, 448, 92, 448, 316, 608, 316, 608, 516, 736, 516, 736, 444)
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
-polygon = PackedVector2Array(-192, -92, -192, -68, -120, -68, -120, 20, -104, 20, -104, -68, 64, -68, 64, 68, -192, 68, -192, 100, 96, 100, 96, -92)
+polygon = PackedVector2Array(-192, -68, -24, -68, -24, 252, -8, 252, -8, -68, 584, -68, 584, 188, 600, 188, 600, -68, 744, -68, 744, 348, 760, 348, 760, -100, -192, -92)
 
 [connection signal="timeout" from="EnemySpawner/SpawnDelay" to="EnemySpawner" method="_on_spawn_delay_timeout"]

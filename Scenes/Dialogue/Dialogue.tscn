@@ -50,7 +50,8 @@ offset_right = 88.0
 offset_bottom = 111.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(48, 64)
+position = Vector2(44, 67)
+scale = Vector2(1.375, 1.375)
 sprite_frames = SubResource("SpriteFrames_7dtm1")
 
 [node name="Label" type="Label" parent="."]
