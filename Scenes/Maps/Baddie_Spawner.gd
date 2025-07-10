@@ -1,8 +1,8 @@
 extends Node
 
 func _on_spawn_delay_timeout():
-		spawn_new_enemy()
-		$SpawnDelay.start()
+	spawn_new_enemy()
+	#$SpawnDelay.start()
 		
 func spawn_new_enemy():
 	var enemyScene := preload("res://Scenes/Enemies/Baddie.tscn")
@@ -15,6 +15,6 @@ func spawn_new_enemy():
 	
 	var baddieGoal = $Target
 	
-	enemy.set_movement_target(baddieGoal.global_position)
-	
 	add_child(enemy)
+	
+	enemy.set_movement_target(baddieGoal.global_position)
