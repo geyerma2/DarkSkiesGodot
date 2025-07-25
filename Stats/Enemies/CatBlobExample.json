@@ -1,0 +1,16 @@
+{
+    "name": "Cat Blob",
+    "enemyLevel": 1,
+    "motionMode": "Standard",
+    "movementSpeed": 3, //Three speed?
+    "attackMode": "Melee",
+    "attack":{
+        "damage": 10,
+        "damageType": "Physical",
+        "cooldown": 400, //In Milliseconds?
+        "appliedStatuses": null
+    },
+    "targetable": "Standard", //Similar to Towers, maybe the enemy can only be hit by certain types of towers
+    "collidable": true,
+    "hitPoints": 30
+}
