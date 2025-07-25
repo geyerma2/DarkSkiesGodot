@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d4c2hf6tefjtn"
+path="res://.godot/imported/Catomancer.dialogue-baa479496c16179961ec05a52c123364.tres"
+
+[deps]
+
+source_file="res://Scenes/Dialogue/Catomancer.dialogue"
+dest_files=["res://.godot/imported/Catomancer.dialogue-baa479496c16179961ec05a52c123364.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,12 @@
+~ start
+Catomancer: [[Hi|Hello|Howdy]], I am the great and powerful Catomancer.
+Catomancer: I have a very important question for you.
+Catomancer: Do you like cats?
+- Yes
+	Catomancer: Me too. [#happy]
+- No 
+	Catomancer: ...[#angry]
+	Catomancer: Then you shall die. [#angry]
+- End the conversation => END
+Catomancer: Ok, bye.
+=> END

@@ -2,7 +2,7 @@ extends Node
 
 func _on_spawn_delay_timeout():
 	spawn_new_enemy()
-	#$SpawnDelay.start()
+	$SpawnDelay.start()
 		
 func spawn_new_enemy():
 	var enemyScene := preload("res://Scenes/Enemies/Baddie.tscn")

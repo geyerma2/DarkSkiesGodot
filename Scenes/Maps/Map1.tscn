@@ -346,7 +346,6 @@ position = Vector2(-184, -52)
 rotation = 1.5708
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-visible = false
 mass = 1000.0
 physics_material_override = SubResource("PhysicsMaterial_bp0wf")
 gravity_scale = 0.0
