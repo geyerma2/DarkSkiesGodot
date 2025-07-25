@@ -1,0 +1,57 @@
+// This is just a mockup of what a Tower object could look like
+
+{
+    "name": "Arrow Tower",
+    "cost": 250,
+    "type": "Projectile", //Other options?  Beam, AoE, Support
+    "rotates": false, //For true, add "rotationSpeed" parameter.  I think Godot uses Radians?
+    "attack": {
+        "arc": 2, //In radians, this should mean a full circle
+        "projectileSpeed": 100,
+        "projectileDamage": 10,
+        "projectileDamageType": "Physical",
+        "damageRadius": 0,
+        "projectileCooldown": 500, //In milliseconds.  We might want to do this in frames.
+        "seeking": false,
+        "appliedStatuses": null //This is an array
+    },
+    "targetable": "Standard", //Targeting type/priority:  Top, High, Standard, Low, Untargetable, Melee Only, Ranged Only, etc...
+    "collidable": true,
+    "hitPoints": 75,
+    "upgrades":[
+    {
+        "name": "Flaming Arrows",
+        "level": 1,
+        "upgradePath": "flamingArrows",
+        "cost": 125,
+        "effects":{
+            "projectileDamage": 15,
+            "projectileDamageType": "Fire",
+            "appliedStatuses": ["Burning"]
+        }
+    },
+    {
+        "name": "Inferno Arrows",
+        "level": 2,
+        "upgradePath": "flamingArrows",
+        "cost": 200,
+        "effects":{
+            "projectileDamage": 18,
+            "projectileDamageType": "Fire",
+            "appliedStatuses": ["Burning", "Fear"]
+        }
+    },
+    {
+        "name": "Acid Arrows",
+        "level": 1,
+        "upgradePath": "acidArrows",
+        "cost": 75,
+        "effects":{
+            "projectileDamage": 12,
+            "projectileCooldown": 450,
+            "appliedStatuses": ["Corrosion"],
+            "hitPoints": 55 //Reduction in HP
+        }
+    }
+]
+}
