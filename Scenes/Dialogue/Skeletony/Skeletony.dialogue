@@ -1,0 +1,11 @@
+~ start
+Skeletony: Hey you.
+Skeletony: I've got a bone to pick with you. [#angry]
+- Who, me?
+	Skeletony: Yeah, you. [#angry]
+- You don't have the guts to deal with me.
+	Skeletony: ...[#angry]
+	Skeletony: That was humorous. [#happy]
+- End the conversation => END
+Skeletony: Ok, bye.
+=> END

@@ -52,8 +52,6 @@ var mutation_cooldown: Timer = Timer.new()
 ## The menu of responses
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
-const CatomancerDialogue = preload("res://Scenes/Dialogue/Catomancer.dialogue")
-
 func _ready() -> void:
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
@@ -64,7 +62,12 @@ func _ready() -> void:
 
 	mutation_cooldown.timeout.connect(_on_mutation_cooldown_timeout)
 	add_child(mutation_cooldown)
-	start(CatomancerDialogue, "start")
+	var scene_path = get_tree().current_scene.scene_file_path
+	var folder_path = scene_path.get_base_dir()
+	var folder_name = folder_path.get_file() # This extracts the last part of the path, which is the folder name
+	var filePath = "res://Scenes/Dialogue/" + folder_name + "/" + folder_name + ".dialogue"
+	var dialogueFile = load(filePath)
+	start(dialogueFile, "start")
 
 
 func _unhandled_input(_event: InputEvent) -> void:
