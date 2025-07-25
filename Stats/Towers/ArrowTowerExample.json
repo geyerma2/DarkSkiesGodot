@@ -48,7 +48,7 @@
         "cost": 75,
         "effects":{
             "projectileDamage": 12,
-            "projectileCooldown": 0.9, //Offers a 10% cooldown reduction
+            "projectileCooldown": 450,
             "appliedStatuses": ["Corrosion"],
             "hitPoints": 55 //Reduction in HP
         }
