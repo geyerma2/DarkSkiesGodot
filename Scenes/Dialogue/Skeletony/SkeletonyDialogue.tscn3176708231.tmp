@@ -1,10 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://clkcbeugyib4k"]
+[gd_scene load_steps=14 format=3 uid="uid://15cpqgfqah47"]
 
-[ext_resource type="Script" uid="uid://c7f45u2veagvy" path="res://Scenes/Dialogue/DialogueBalloon.gd" id="1_amqmn"]
-[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_r0jyt"]
-[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_ygreb"]
-[ext_resource type="Texture2D" uid="uid://ccmvf1j4tfi5v" path="res://Assets/Catomancer.png" id="4_r0jyt"]
-[ext_resource type="Script" uid="uid://dohc6vqxgu12f" path="res://Scenes/Dialogue/base_portrait.gd" id="5_ygreb"]
+[ext_resource type="Script" uid="uid://c7f45u2veagvy" path="res://Scenes/Dialogue/DialogueBalloon.gd" id="1_yomhj"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_nm4c3"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_5nsnl"]
+[ext_resource type="Texture2D" uid="uid://d2v0nhi6g1lyh" path="res://Assets/Skeletony.png" id="4_7b7yf"]
+[ext_resource type="Script" uid="uid://dohc6vqxgu12f" path="res://Scenes/Dialogue/base_portrait.gd" id="5_oijd0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -65,22 +65,22 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ygreb"]
-atlas = ExtResource("4_r0jyt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj6de"]
+atlas = ExtResource("4_7b7yf")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rkwiu"]
-atlas = ExtResource("4_r0jyt")
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2xa2"]
+atlas = ExtResource("4_7b7yf")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_g7mcc"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_tjbd8"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ygreb")
+"texture": SubResource("AtlasTexture_cj6de")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rkwiu")
+"texture": SubResource("AtlasTexture_w2xa2")
 }],
 "loop": true,
 "name": &"default",
@@ -89,7 +89,9 @@ animations = [{
 
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
-script = ExtResource("1_amqmn")
+script = ExtResource("1_yomhj")
+next_action = null
+skip_action = null
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
@@ -132,7 +134,7 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_r0jyt")]
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_nm4c3")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -155,7 +157,7 @@ grow_vertical = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
-script = ExtResource("3_ygreb")
+script = ExtResource("3_5nsnl")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
@@ -165,8 +167,8 @@ text = "Response example"
 [node name="Portrait" type="AnimatedSprite2D" parent="."]
 position = Vector2(96, 360)
 scale = Vector2(2.375, 2.375)
-sprite_frames = SubResource("SpriteFrames_g7mcc")
-script = ExtResource("5_ygreb")
+sprite_frames = SubResource("SpriteFrames_tjbd8")
+script = ExtResource("5_oijd0")
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

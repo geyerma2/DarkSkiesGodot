@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c8vm1qfd8tq31"
+path="res://.godot/imported/Skeletony.dialogue-cec83fd68d2dcd1c7a119b0be55939dd.tres"
+
+[deps]
+
+source_file="res://Scenes/Dialogue/Skeletony/Skeletony.dialogue"
+dest_files=["res://.godot/imported/Skeletony.dialogue-cec83fd68d2dcd1c7a119b0be55939dd.tres"]
+
+[params]
+
+defaults=true
